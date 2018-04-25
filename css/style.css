@@ -1,21 +1,59 @@
- #mcontent{
+p{
+	margin:0;
+}
+.text_right{
+	text-align: right;
+}
+.no_style{
+	list-style: none;
+	margin:0;
+	padding:0;
+}
+.no_style li{
+	display: inline-block;
+}
+
+ #mcontent > .container .mcontainer{
  	background-image: url(../img/mainpic2.bmp);
- 	background-size: 100%;
+ 	background-size: cover;
  	background-repeat: no-repeat;
  	background-position: center;
- 	margin: 0;
+ 	min-height: calc(100vh - 55px);
  	padding:0;
+ 	/*width: 100%;*/
  }
+
+ /* menu */
+ .navbar-expand-lg .navbar-brand{
+ 	padding:2px;
+ 	display: inline-block;
+ 	width: 65px;
+ 	height: 50px;
+ }
+ .navbar-expand-lg .navbar-brand img{
+ 	width: 100%;
+ }
+ ul.sub_menu li{
+ 	display: block;
+ }
+ ul.sub_menu li > a{
+ 	display: inline-block;
+ 	padding:10px;
+ }
+
+ /* forms */
  .show_auth_form_btn{
  	padding: 20px;
  	text-align: right;
  }
-.show_auth_form{
+.show_form{
+	background-color: rgba(0,0,0,.4);
 	display: none;
-	width: 100%;
 	height: 100%;
+	left: 0;
 	position: absolute;
-	background-color: rgba(0,0,0,.2);
+	top: 0;
+	width: 100%;
 }
 .form_bl{
 	background-color: #fff;
@@ -23,5 +61,97 @@
 	border-radius: 5px;
 	float: none;
 	margin: 10% auto 0;
-	padding: 15px;
+	max-width: 320px;
+	padding:30px 15px 15px;
+	position: relative;
+}
+.close_bl{
+	background-color: #fff;
+	border: 1px solid #dedede;
+	border-radius: 50%;
+	display: inline-block;
+	position: absolute;
+	right: -15px;
+	text-align: right;
+	top: -15px;
+	transition: all .5s linear;
+	z-index: 999;
+}
+.close_bl span{
+	cursor: pointer;
+	display: inline-block;
+	padding: 5px 10px;
+	transition: 0.70s;
+	-webkit-transition: 0.70s;
+	-moz-transition: 0.70s;
+	-ms-transition: 0.70s;
+	-o-transition: 0.70s;
+}
+.close_bl span:hover{
+	transition: 0.70s;
+	-webkit-transition: 0.70s;
+	-moz-transition: 0.70s;
+	-ms-transition: 0.70s;
+	-o-transition: 0.70s;
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	-o-transform: rotate(180deg);
+	-ms-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+
+/* settings page */
+.settings_page{
+	background-color: rgba(255,255,255,.8);
+	min-height: calc(100vh - 120px);
+	padding:30px 30px 30px 50px;
+}
+.intro_text{
+	padding:20px 15px;
+	margin-bottom: 10px;
+}
+.settings_page form > div{
+	margin-bottom: 25px;
+}
+
+.set_title{
+	font-size: 1.2em;
+	margin-left: -15px;
+}
+.set_title:after{
+	border-bottom:2px solid #0092e1;
+	content: " ";
+	display: block;
+	padding-top: 10px;
+	transition:all 1s linear;
+	width: 100px;
+}
+.set_title:hover::after{
+	width: 260px;
+}
+
+
+
+footer{
+	background-color: #dedede;
+	padding:15px;
+}
+
+
+
+
+
+@media screen and ( max-width: 768px ){
+
+	footer .copyright p{
+		text-align: center;
+	}
+}
+
+@media screen and ( max-width: 480px ){
+
+	footer .date_dev{
+		display: block;
+	}
 }
